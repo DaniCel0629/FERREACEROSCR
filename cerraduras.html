@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cerraduras y Herrajes | FERREACEROS CR</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- HEADER igual al de index -->
+  <header>
+    <div class="nav container">
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <a href="index.html" class="logo">FERREACEROS<span>CR</span></a>
+      <ul class="navbar" id="navbar">
+        <li><a href="index.html#home">Inicio</a></li>
+        <li><a href="index.html#products">Productos</a></li>
+        <li><a href="index.html#brands">Marcas</a></li>
+        <li><a href="index.html#comentarios">Comentarios</a></li>
+        <li><a href="index.html#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="category-products cerraduras-section" style="margin-top:100px">
+    <h1>Cerraduras y Herrajes</h1>
+
+    <div class="product-list">
+
+      <!-- Cerraduras -->
+      <div class="product-item expandable">
+        <img src="img/cerraduras.jpg" alt="Cerraduras">
+        <div class="info">
+          <h3>Cerraduras</h3>
+          <span class="toggle-btn" role="button" tabindex="0">Ver productos</span>
+          <ul class="sub-list">
+            <li>Cerraduras de sobreponer</li>
+            <li>Cerradura izquierda</li>
+            <li>Cerradura derecha</li>
+            <li>Cerraduras de barra fija</li>
+            <li>Cerrojo tipo esfera</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Candados -->
+      <div class="product-item expandable">
+        <img src="img/candados.jpg" alt="Candados">
+        <div class="info">
+          <h3>Candados</h3>
+          <span class="toggle-btn" role="button" tabindex="0">Ver productos</span>
+          <ul class="sub-list">
+            <li>Candados de gancho corto</li>
+            <li>Candados de gancho largo</li>
+            <li>Candados antipalanca (para cortina)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bisagras y cerrojos -->
+      <div class="product-item expandable">
+        <img src="img/bisagras.jpg" alt="Bisagras y cerrojos">
+        <div class="info">
+          <h3>Bisagras y cerrojos</h3>
+          <span class="toggle-btn" role="button" tabindex="0">Ver productos</span>
+          <ul class="sub-list">
+            <li>Bisagras de acero cuadradas</li>
+            <li>Bisagras tipo mariposa</li>
+            <li>Bisagras de acero tubulares</li>
+            <li>Caimanes para cuadros</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Herrajes muebles/clóset -->
+      <div class="product-item expandable">
+        <img src="img/herrajes.jpg" alt="Herrajes para muebles y clóset">
+        <div class="info">
+          <h3>Herrajes para muebles y clóset</h3>
+          <span class="toggle-btn" role="button" tabindex="0">Ver productos</span>
+          <ul class="sub-list">
+            <li>Correderas de extensión para cajón</li>
+            <li>Tubos redondos para clóset</li>
+            <li>Tubos ovalados para clóset</li>
+            <li>Soportes centrales de metal</li>
+            <li>Bridas de acero</li>
+            <li>Jaladeras de acero</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="index.html" class="product-btn">← Volver al inicio</a>
+  </section>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/4426708446" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class='bx bxl-whatsapp'></i>
+  </a>
+
+  <script src="main.js"></script>
+  <script>
+    // Fallback acordeón accesible
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.setAttribute('role','button'); btn.setAttribute('tabindex','0');
+        const toggle = (e) => { e.preventDefault(); btn.closest('.expandable')?.classList.toggle('active'); };
+        btn.addEventListener('click', toggle);
+        btn.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') toggle(e); });
+      });
+    });
+  </script>
+</body>
+</html>

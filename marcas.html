@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Marcas Representadas | FERREACEROS CR</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    /* Sección */
+    .brands-section {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: white;
+    }
+
+    .brands-section h1 {
+      font-size: 1.8em;
+      color: #001b44;
+      margin-bottom: 30px;
+    }
+
+    /* Carrusel */
+    .brands-slider {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .brands-track {
+      display: flex;
+      animation: scrollBrands 25s linear infinite;
+    }
+
+    .brands-slider:hover .brands-track {
+      animation-play-state: paused; /* Pausa al pasar mouse */
+    }
+
+    .brand-item {
+      flex: 0 0 auto;
+      margin: 0 40px;
+    }
+
+    .brand-item img {
+      max-height: 60px;
+      width: auto;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+
+    .brand-item img:hover {
+      filter: grayscale(0%);
+    }
+
+    @keyframes scrollBrands {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="navbar" id="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="ferreteria.html">Ferretería</a></li>
+      <li><a href="acero.html">Acero</a></li>
+      <li><a href="plomeria.html">Plomería</a></li>
+      <li><a href="electricidad.html">Electricidad</a></li>
+      <li><a href="fijacion.html">Fijación y Ensamble</a></li>
+      <li><a href="seguridad.html">Seguridad</a></li>
+      <li><a href="cerraduras.html">Cerraduras y Herrajes</a></li>
+      <li><a href="construccion.html">Construcción</a></li>
+      <li><a href="limpieza.html">Limpieza</a></li>
+      <li><a href="marcas.html" class="active">Marcas</a></li>
+      <li><a href="contacto.html">Contáctanos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="brands-section">
+  <h1>Marcas Representadas</h1>
+  <div class="brands-slider">
+    <div class="brands-track">
+      <!-- Logos -->
+      <div class="brand-item"><img src="img/truper.png" alt="Truper"></div>
+      <div class="brand-item"><img src="img/pretul.png" alt="Pretul"></div>
+      <div class="brand-item"><img src="img/surteck.png" alt="Surteck"></div>
+      <div class="brand-item"><img src="img/fiero.png" alt="Fiero"></div>
+      <div class="brand-item"><img src="img/volteck.png" alt="Volteck"></div>
+      <div class="brand-item"><img src="img/hermex.png" alt="Hermex"></div>
+      <div class="brand-item"><img src="img/foset.png" alt="Foset"></div>
+      <div class="brand-item"><img src="img/klintek.png" alt="Klintek"></div>
+      <div class="brand-item"><img src="img/suferre.png" alt="SuFerre"></div>
+      <div class="brand-item"><img src="img/mastercoat.png" alt="Master Coat"></div>
+      <div class="brand-item"><img src="img/phillips.png" alt="Phillips"></div>
+      <div class="brand-item"><img src="img/makita.png" alt="Makita"></div>
+      <div class="brand-item"><img src="img/astromex.png" alt="Astromex"></div>
+      <div class="brand-item"><img src="img/infra.png" alt="Infra"></div>
+      
+
+
+      <!-- Repetición para el efecto infinito -->
+      <div class="brand-item"><img src="img/truper.png" alt="Truper"></div>
+      <div class="brand-item"><img src="img/pretul.png" alt="Pretul"></div>
+      <div class="brand-item"><img src="img/surteck.png" alt="Surteck"></div>
+      <div class="brand-item"><img src="img/fiero.png" alt="Fiero"></div>
+      <div class="brand-item"><img src="img/volteck.png" alt="Volteck"></div>
+      <div class="brand-item"><img src="img/hermex.png" alt="Hermex"></div>
+      <div class="brand-item"><img src="img/foset.png" alt="Foset"></div>
+      <div class="brand-item"><img src="img/klintek.png" alt="Klintek"></div>
+      <div class="brand-item"><img src="img/suferre.png" alt="SuFerre"></div>
+      <div class="brand-item"><img src="img/mastercoat.png" alt="Master Coat"></div>
+      <div class="brand-item"><img src="img/phillips.png" alt="Phillips"></div>
+      <div class="brand-item"><img src="img/makita.png" alt="Makita"></div>
+      <div class="brand-item"><img src="img/astromex.png" alt="Astromex"></div>
+      <div class="brand-item"><img src="img/infra.png" alt="Infra"></div>
+    </div>
+  </div>
+</section>
+
+<a href="index.html" class="product-btn">← Volver al inicio</a>
+
+<script src="main.js"></script>
+</body>
+</html>

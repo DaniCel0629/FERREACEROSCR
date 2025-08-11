@@ -1,0 +1,961 @@
+/* Variables */
+:root {
+  --main-color: #2A6D75;
+  --text-color: #2D3A3D;
+  --bg-color: #ffffff;
+  --accent-color: #1e4d53;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--bg-color);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+#menu-icon {
+  font-size: 50px;
+  cursor: pointer;
+  color: var(--text-color);
+  display: block;
+}
+
+.logo {
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.logo span {
+  color: var(--main-color);
+}
+
+.navbar {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 15px;
+  background: #fff;
+  padding: 10px 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.navbar.active {
+  display: flex;
+}
+
+.navbar li {
+  margin: 10px 0;
+}
+
+.navbar a {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Home */
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url('img/background.png') no-repeat center left;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.home-text {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.home-text h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: var(--text-color);
+  line-height: 1.3;
+  margin-bottom:1rem;
+}
+
+.intro-subtext {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  margin-top: 0.2rem;
+}
+
+/* Logo */
+.home-logo {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-logo img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Logo */
+.home-logo {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-logo img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+/* WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  font-size: 30px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Contacto */
+.contact-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.map-container iframe {
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .home-text {
+    flex: 1 1 100%;
+    align-items: flex-start;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .intro-subtext {
+    padding-left: 4px;
+  }
+
+  .home-logo {
+    flex: 1 1 100%;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .navbar {
+    top: 60px;
+    left: 0;
+    right: 0;
+  }
+}
+
+.products {
+  padding: 80px 40px;
+  background-color: #f4f8f9;
+  text-align: center;
+}
+
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products h2 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.products-subtext {
+  font-size: 1.1rem;
+  color: var(--main-color);
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.product.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-btn:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+.product-btn i {
+  font-size: 1.2rem;
+}
+
+
+/* HTMLS en productos*/
+
+.category-products {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.category-products h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.product-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 300px;
+  padding: 15px;
+  text-align: left;
+}
+
+.product-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-item h3 {
+  font-size: 1.2rem;
+  color: var(--main-color);
+  margin-bottom: 6px;
+}
+
+.product-item p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* --- ESTILO GENERAL DE SECCIÓN DE CATEGORÍAS --- */
+
+.category-products {
+  background-color: #f0f8ff; /* Azul claro */
+  padding: 40px 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-products h1 {
+  color: #0077cc;
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #0077cc;
+  padding-bottom: 10px;
+}
+
+/* --- LISTA DE PRODUCTOS --- */
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 10px 0;
+}
+
+.product-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.product-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-item .info {
+  padding: 15px;
+}
+
+.product-item .info h3 {
+  color: #005f99;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.product-item .info p {
+  color: #444;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+/* --- HOVER EFECTO --- */
+
+.product-item:hover {
+  box-shadow: 0 0 15px rgba(0, 119, 204, 0.25);
+  transform: scale(1.02);
+}
+
+/* --- BOTÓN DE VOLVER --- */
+
+.product-btn {
+  display: inline-block;
+  background-color: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  margin: 40px auto 0;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.product-btn:hover {
+  background-color: #005f99;
+}
+
+/* --- ESTILO PERSONALIZADO PARA LA CATEGORÍA ELECTRICIDAD --- */
+
+.electricity-section {
+  background-color: #fffbea; /* Fondo amarillo claro */
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.electricity-section h1 {
+  color: #ff9800; /* Naranja fuerte */
+  border-bottom: 3px solid #ff9800;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.electricity-section .product-item:hover {
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.3);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.electricity-section .info h3 {
+  color: #e65100;
+}
+
+/* --- ESTILO PERSONALIZADO PARA LA CATEGORÍA FIJACIÓN Y ENSAMBLE --- */
+
+.fijacion-section {
+  background-color: #f4f4f4; /* Gris claro */
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.fijacion-section h1 {
+  color: #444;
+  border-bottom: 3px solid #888;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.fijacion-section .product-item:hover {
+  box-shadow: 0 0 15px rgba(100, 100, 100, 0.3);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.fijacion-section .info h3 {
+  color: #222;
+}
+
+/* --- ESTILO PERSONALIZADO PARA LA CATEGORÍA SEGURIDAD --- */
+
+.seguridad-section {
+  background-color: #fff5f5; /* Fondo rojo claro */
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.seguridad-section h1 {
+  color: #b71c1c; /* Rojo oscuro */
+  border-bottom: 3px solid #b71c1c;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.seguridad-section .product-item:hover {
+  box-shadow: 0 0 15px rgba(183, 28, 28, 0.25);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.seguridad-section .info h3 {
+  color: #880e4f;
+}
+
+/* --- ESTILO PERSONALIZADO PARA LA CATEGORÍA CERRADURAS Y HERRAJES --- */
+
+.cerraduras-section {
+  background-color: #f7f7f7; /* Gris muy claro */
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.cerraduras-section h1 {
+  color: #2e2e2e; /* Gris oscuro */
+  border-bottom: 3px solid #2e2e2e;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.cerraduras-section .product-item:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.cerraduras-section .info h3 {
+  color: #1a1a1a;
+}
+
+/* --- ESTILO PERSONALIZADO PARA LA CATEGORÍA MATERIALES DE CONSTRUCCIÓN --- */
+
+.construccion-section {
+  background-color: #fef9f4; /* Beige claro */
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.construccion-section h1 {
+  color: #8d6e63; /* Marrón ladrillo */
+  border-bottom: 3px solid #8d6e63;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.construccion-section .product-item:hover {
+  box-shadow: 0 0 15px rgba(141, 110, 99, 0.2);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.construccion-section .info h3 {
+  color: #5d4037;
+}
+
+/* --- ESTILO PERSONALIZADO PARA LA CATEGORÍA LIMPIEZA Y MANTENIMIENTO --- */
+
+.limpieza-section {
+  background-color: #f0fbf7; /* Verde-azulado claro */
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.limpieza-section h1 {
+  color: #00796b; /* Verde esmeralda */
+  border-bottom: 3px solid #00796b;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.limpieza-section .product-item:hover {
+  box-shadow: 0 0 15px rgba(0, 121, 107, 0.2);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.limpieza-section .info h3 {
+  color: #004d40;
+}
+
+.sub-list {
+  display: none;
+  padding: 10px 0 0 20px;
+  list-style-type: disc;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.expandable.active .sub-list {
+  display: block;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Acordeón con animación ---------- */
+.product-item.expandable { position: relative; }
+
+.toggle-btn{
+  cursor: pointer;
+  color: var(--main-color, #0077cc);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  user-select: none;
+  text-decoration: none;
+}
+
+/* Chevron que gira */
+.toggle-btn::after{
+  content: "▾";
+  font-size: .9em;
+  transition: transform .25s ease;
+}
+.expandable.active .toggle-btn::after{
+  transform: rotate(180deg);
+}
+
+/* Estado cerrado */
+.sub-list{
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: max-height .35s ease, opacity .25s ease, transform .25s ease;
+  margin: 8px 0 0 18px;
+  padding-left: 0;
+  list-style: disc;
+  color: #333;
+  font-size: .95rem;
+  line-height: 1.45;
+}
+
+/* Estado abierto */
+.expandable.active .sub-list{
+  max-height: 600px; /* Ajusta si tus listas son muy largas */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sombra opcional cuando está abierto */
+.expandable.active{
+  box-shadow: 0 0 14px rgba(0,0,0,.06);
+}
+
+/* Alineación de grilla */
+.product-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: start;
+}
+.product-item{
+  display:flex;
+  flex-direction:column;
+  width: 300px; /* ajusta según diseño */
+}
+.product-item img{
+  height:160px;
+  object-fit:cover;
+}
+.product-item .info{
+  flex:1;
+}
+
+/* Ver medidas de aceros*/
+.toggle-btn{
+  display:inline-flex;
+  padding:6px 10px;
+  border-radius:6px;
+  background:#607d8b10;
+}
+.toggle-btn:hover{ background:#607d8b20; }
+
+.dropdowns details {
+  margin: 5px 0;
+  background: #f0f5f5;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dropdowns summary {
+  font-weight: bold;
+  color: #0066cc;
+}
+
+.dropdowns ul {
+  margin: 5px 0 0 15px;
+  padding: 0;
+  list-style: disc;
+}
+
+/* Sección de marcas */
+.brands-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.brands-section h1 {
+  font-size: 1.8em;
+  color: #001b44;
+  margin-bottom: 30px;
+}
+
+/* Carrusel de marcas */
+.brands-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.brands-track {
+  display: flex;
+  animation: scrollBrands 10s linear infinite;
+}
+
+.brands-slider:hover .brands-track {
+  animation-play-state: paused;
+}
+
+.brand-item {
+  flex: 0 0 auto;
+  margin: 0 40px;
+}
+
+.brand-item img {
+  max-height: 60px;
+  width: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.brand-item img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes scrollBrands {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.reviews-section {
+  padding: 40px 20px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.reviews-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.review-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.stars {
+  font-size: 1.4rem;
+  color: #FFD700; /* dorado */
+}
+
+.review-card h3 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Contacto centrado */
+.contact {
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+.contact .container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact .heading span {
+  display: inline-block;
+  color: var(--main-color);
+  font-weight: 600;
+}
+.contact .heading h2 {
+  margin: 6px 0 4px;
+  color: #222;
+}
+.contact .heading p {
+  color: #555;
+}
+
+.contact-info {
+  margin: 14px auto 18px;
+  font-size: 1rem;
+  color: #333;
+}
+.contact-info p {
+  margin: 6px 0;
+}
+.contact-info a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed #bbb;
+}
+.contact-info a:hover {
+  border-bottom-color: var(--main-color);
+}
+
+.whatsapp-note {
+  margin-top: 6px;
+  font-style: italic;
+  color: #666;
+}
+
+.map-container {
+  margin-top: 12px;
+}
+.map-container iframe {
+  width: 100%;
+  height: 300px;      /* ya lo traes inline, aquí también por si quitas el inline */
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ====== Overrides responsivos ====== */
+
+/* Suaviza el scroll */
+html { scroll-behavior: smooth; }
+
+/* Header: evita que el contenido quede oculto tras el header fijo */
+body { padding-top: 76px; } /* ajusta según alto real de tu header */
+
+/* HOME: usa grid en pantallas medianas y grandes */
+@media (min-width: 768px){
+  .home-container{
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+/* Títulos y subtítulos con tamaño fluido */
+.home-text h1{
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  line-height: 1.2;
+}
+.intro-subtext{
+  font-size: clamp(1rem, 2.4vw, 1.6rem);
+}
+
+/* GRID de productos 100% fluido */
+.product-grid{
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(14px, 2.5vw, 24px);
+}
+
+/* Quita el ancho fijo de las cards/items que frenaba el responsive */
+.product-card{ max-width: none; }
+.product-item{ width: auto; }
+
+/* Imágenes de cards con proporción consistente */
+.product-card img,
+.product-item img{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Listas de categoría: asegúrate de usar GRID, no FLEX */
+.category-products .product-list{
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Acordeón: que el texto no “salte” */
+.sub-list{ will-change: max-height, opacity, transform; }
+
+/* Mapa fluido */
+.map-container iframe{
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+}
+
+/* Carrusel de marcas: tamaños según pantalla */
+.brand-item{ margin: 0 clamp(16px, 4vw, 40px); }
+.brand-item img{ max-height: clamp(34px, 6vw, 60px); }
+
+/* Anima más suave y respeta reduced motion */
+.brands-track{ animation: scrollBrands 16s linear infinite; }
+@media (max-width: 480px){
+  .brands-track{ animation-duration: 22s; }
+}
+@media (prefers-reduced-motion: reduce){
+  .brands-track{ animation: none; transform: none; }
+}
+
+/* Navbar móvil: que el dropdown use todo el ancho */
+@media (max-width: 768px){
+  .navbar{
+    left: 12px;
+    right: 12px;
+    width: auto;
+  }
+}
+
+/* Cards de reseñas más compactas en móvil */
+.reviews-container{
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Contacto centrado ya lo traes; solo ajusta el max-width para verse mejor */
+.contact .container{ max-width: 960px; }
+
+/* Footer (si lo agregas luego) padding seguro */
+footer{ padding: 24px 16px; }
